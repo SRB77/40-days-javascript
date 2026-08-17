@@ -1,23 +1,24 @@
 # Day 01 learning of 40-days-of-javascript 
 ---
-#### today's learning was too simple it's about setting-up enviornment to learn Javascript 
-**1. Through Browser**
-**2. Through Node env**
+#### today's learning was too simple it's about setting-up environment to learn Javascript 
+- Through Browser
+- Through Node env
 
 ---
 
 #### How Javascript got loaded into Browser through HTML
-there are 3 ways in total , all using script tag ofcourse 
-**1.`<script src="file.js"></script>`**
-**2.`<script async src="file.js"></script>`**
-**3.`<script defer src="file.js"></script>`**
+There are 3 ways in total, all using the script tag of course:
 
-the main differnce is all about the how javascript got loaded in browser and executed with DOM 
+1. `<script src="file.js"></script>`
+2. `<script async src="file.js"></script>`
+3. `<script defer src="file.js"></script>`
 
-**1.** with normal script , when browser encounter `<scrip>`t tag , It immediately stops and started loadiing all the `JS` script and execute it then and there and after that it paint remaining DOM of `HTML`
+The main difference is how JavaScript is loaded in the browser and executed with the DOM:
 
-**2.** with the help of `Async` attribute `JS` started loading simultaneously with `HTML` DOM , but once loading complete it execute it too , one problem got solved but execution problem persist .
+1. With a normal `<script>` tag, when the browser encounters it, parsing pauses; the script is fetched and executed immediately, which blocks further parsing and rendering.
 
-**3.** Here comes the hero `defer` who exactly works like we all needed . it loads JS asynchronously and wait till all the DOM paint has done by the browser , then it execute the `JS` with the perfect `DOM`.
+2. With `async`, scripts are fetched in parallel with HTML parsing and execute as soon as they're ready — this can change execution order or run before the DOM is fully parsed.
 
->These are all the major things in Day 01
+3. With `defer`, scripts are fetched in parallel and executed after the HTML is parsed, preserving execution order and avoiding blocking rendering.
+
+> These are all the major things in Day 01
